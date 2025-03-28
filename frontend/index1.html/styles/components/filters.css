@@ -1,0 +1,119 @@
+/* styles/components/filters.css */
+
+/* Filter Section Container */
+.filter-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.filter-section h5 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.filter-section h5 i {
+    margin-right: 10px;
+}
+
+/* Form Elements */
+.filter-section .form-label {
+    font-weight: 500;
+    color: var(--dark-color);
+    margin-bottom: 8px;
+}
+
+.filter-section .form-select {
+    border: 2px solid var(--light-color);
+    border-radius: 8px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.filter-section .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(110, 142, 251, 0.2);
+}
+
+/* Select2 Customization */
+.select2-container--default .select2-selection--multiple {
+    border: 2px solid var(--light-color);
+    border-radius: 8px;
+    min-height: 42px;
+    padding: 5px 10px;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 4px 12px;
+    margin: 3px;
+}
+
+.select2-container--default .select2-results__option--highlighted {
+    background-color: var(--primary-color) !important;
+}
+
+/* Filter Buttons */
+.filter-section .btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    padding: 12px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.filter-section .btn-outline-secondary {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.filter-section .btn-outline-secondary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .filter-section {
+        padding: 15px;
+    }
+    
+    .filter-section h5 {
+        font-size: 1.1rem;
+    }
+    
+    .filter-section .form-select {
+        padding: 8px 12px;
+    }
+}
+
+/* Loading Spinner for Filters */
+.filter-loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.filter-loading::after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s linear infinite;
+    margin-left: 8px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
